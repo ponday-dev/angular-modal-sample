@@ -1,0 +1,45 @@
+.dialog-body {
+	padding: 1rem;
+	border-radius: 5px;
+	background-color:white;
+}
+input[type=text] {
+	padding: 0.5rem 0.5rem;
+	width: 15rem;
+	border-radius: 5px;
+	margin-bottom: 1rem;
+	outline: none;
+	border: 1px solid #CCCCCC;
+}
+.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+.button {
+	border-radius: 5px;
+	padding: 0.5rem 0;
+	border: none;
+	width: 4rem;
+
+	&:not(:nth-last-child(1)) {
+		margin-right: 0.5rem;
+	}
+
+	&--ok {
+		background-color: #2C6EF4;
+		color: white;
+
+		&:hover {
+			background-color: lighten(#447AE6, 20%);
+		}
+	}
+	&--cancel {
+		background-color: transparent;
+		color: #404040;
+
+		&:hover {
+			background-color: #e0e0e0;
+		}
+	}
+}
