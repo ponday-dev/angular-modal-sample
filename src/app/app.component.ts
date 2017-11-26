@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalSampleComponent } from './components/modal-sample/modal-sample.component';
-import { Modal } from './modules/modal/services/modal.service';
+import { ModalService } from './modal';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { Modal } from './modules/modal/services/modal.service';
 export class AppComponent {
   result = "";
 
-  constructor(private modal: Modal) { }
+  constructor(private modal: ModalService) { }
 
   openModal() {
     // The component must registered 'entryComponents' in module.

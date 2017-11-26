@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ModalContext } from '../../modules/modal/services/modal.service';
+import { ModalContext } from '../../modal';
 
 @Component({
   selector: 'app-modal-sample',
