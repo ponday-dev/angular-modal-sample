@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('angular-modal App', () => {
+describe('angular-modal-sample App', () => {
   let page: AppPage;
 
   beforeEach(() => {
