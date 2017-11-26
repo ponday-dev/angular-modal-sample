@@ -1,0 +1,25 @@
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(66, 66, 66, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    transition: all .2s linear;
+    &.hidden {
+      background-color: rgba(66, 66, 66, 0);
+    }
+  }
+  .container {
+    transform: scale(1);
+    transition: all .1s linear;
+  
+    &.hidden {
+      transform: scale(0);
+    }
+  }
+  
