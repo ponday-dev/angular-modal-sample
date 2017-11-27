@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ModalEntryComponent } from './modal-entry/modal-entry.component';
 import { ModalContainerComponent } from './modal-container/modal-container.component';
 import { ModalService } from './modal.service';
+import { ModalEntryDirective } from './modal-entry.directive';
 
 @NgModule({
   imports: [
     CommonModule
   ],
   exports: [
-    ModalEntryComponent
+    ModalEntryDirective
   ],
   providers: [
     ModalService
   ],
   declarations: [
-    ModalEntryComponent, 
-    ModalContainerComponent
+    ModalContainerComponent,
+    ModalEntryDirective
   ],
   entryComponents: [
     ModalContainerComponent

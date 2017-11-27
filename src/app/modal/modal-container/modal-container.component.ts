@@ -1,4 +1,10 @@
-import { Component, AfterViewInit, ViewChild, ViewContainerRef } from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  ViewChild,
+  ViewContainerRef,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'modal-container',
@@ -12,8 +18,13 @@ export class ModalContainerComponent implements AfterViewInit {
 
   hidden = true;
 
+  constructor(private cd: ChangeDetectorRef) { }
+
   ngAfterViewInit() {
-    setTimeout(() => this.hidden = false, 30);
+    setTimeout(() => {
+      this.hidden = false;
+      this.cd.markForCheck();
+    }, 30);
   }
 
 }
