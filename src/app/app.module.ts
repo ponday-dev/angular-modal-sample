@@ -11,7 +11,7 @@ import { ModalSampleComponent } from './components/modal-sample/modal-sample.com
 @NgModule({
   declarations: [
     AppComponent,
-    ModalSampleComponent
+    ModalSampleComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,7 +21,7 @@ import { ModalSampleComponent } from './components/modal-sample/modal-sample.com
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [
-    ModalSampleComponent
+    ModalSampleComponent,
   ]
 })
 export class AppModule { }

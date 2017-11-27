@@ -15,8 +15,9 @@
     }
   }
   .container {
-    transform: scale(1);
-    transition: all .1s linear;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 150ms linear;
   
     &.hidden {
       transform: scale(0);

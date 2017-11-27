@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { ModalSampleComponent } from './components/modal-sample/modal-sample.component';
-import { ModalService } from './modal';
+import { ModalService, ModalEntryDirective } from './modal';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
+
+  @ViewChild(ModalEntryDirective) modalEntry: ModalEntryDirective;
+
   result = "";
 
   constructor(private modal: ModalService) { }
@@ -15,7 +19,7 @@ export class AppComponent {
   openModal() {
     // The component must registered 'entryComponents' in module.
     // And also, that module can not lazy load.
-    this.modal.open<string>(ModalSampleComponent, 'initial')
+    this.modal.open<string>(this.modalEntry, ModalSampleComponent, 'initial')
       .subscribe(
         result => {
           this.result = result;
